@@ -48,15 +48,6 @@ export default function Hero() {
         </motion.blockquote>
 
       </div>
-        {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/logotipo.webp')",
-          transform: `translateY(${scrollY * 0.15}px)`,
-        }}
-      />
-
     </section>
   );
 }
