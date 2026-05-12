@@ -70,11 +70,6 @@ body {
   z-index: 0;
 }
 
-#sobre > * {
-  position: relative;
-  z-index: 1;
-}
-
 
 /* Remove highlight azul no mobile */
 button, a {
