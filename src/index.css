@@ -50,27 +50,6 @@ body {
 }
 
 
-
-#sobre {
-  position: relative;
-  background-color: white;
-  overflow: hidden;
-}
-
-#sobre::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("logotipo.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 600px; /* ajusta o tamanho */
-  opacity: 0.3; /*  controla a força da marca d’água */
-  pointer-events: none;
-  z-index: 0;
-}
-
-
 /* Remove highlight azul no mobile */
 button, a {
   -webkit-tap-highlight-color: transparent;
