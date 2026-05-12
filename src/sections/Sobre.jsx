@@ -17,10 +17,10 @@ export default function Hero() {
     >
       {/* Background image */}
 <div
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
   style={{
     backgroundImage: "url('logotipo.webp')",
-    backgroundSize: "600px", // 👈 muda o tamanho aqui
+    backgroundSize: "400px", // 👈 muda o tamanho aqui
     transform: `translateY(${scrollY * 0.15}px)`,
   }}
 />
