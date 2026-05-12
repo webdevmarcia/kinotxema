@@ -17,7 +17,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity:30"
         style={{
           backgroundImage: "url('logotipo.webp')",
           transform: `translateY(${scrollY * 0.15}px)`,
