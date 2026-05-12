@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* ------------------------------
+   VARIÁVEIS DE TEMA
+------------------------------ */
+:root {
+  --castanho: rgb(161, 97, 97);
+  --brown: rgb(43, 12, 12);
+  --verde: green;
+  --gray: rgba(244, 140, 37, 0.08);
+  --claro: rgb(228, 167, 167);
+
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* ------------------------------
+   RESET GLOBAL
+------------------------------ */
+* {
+  
+  box-sizing: border-box;
+  
+
+}
+
+li {
+  text-align: justify;
+}
+
+
+
+footer {
+  text-align: center;
+  align-items: center;
+}
+
+.contatos {
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+
+
+#sobre {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+
+#sobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("logotipo.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 600px; /* ajusta o tamanho */
+  opacity: 0.3; /*  controla a força da marca d’água */
+  pointer-events: none;
+  z-index: 0;
+}
+
+#sobre > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Remove highlight azul no mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ------------------------------
+   ANIMAÇÕES CINEMATOGRÁFICAS
+------------------------------ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Slide do menu mobile */
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.4s ease forwards;
+}
+
+/* ------------------------------
+   IMAGENS
+------------------------------ */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+p {
+  text-align: justify;
+}
+
+
+
+.font-greatvibes {
+    font-family: 'Great Vibes', cursive;
+}
+
