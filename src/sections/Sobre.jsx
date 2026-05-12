@@ -16,13 +16,15 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white px-6 py-24"
     >
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity:30"
-        style={{
-          backgroundImage: "url('logotipo.webp')",
-          transform: `translateY(${scrollY * 0.15}px)`,
-        }}
-      />
+<div
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+  style={{
+    backgroundImage: "url('logotipo.webp')",
+    backgroundSize: "600px", // 👈 muda o tamanho aqui
+    transform: `translateY(${scrollY * 0.15}px)`,
+  }}
+/>
+
 
       <div className="relative mx-auto text-center max-w-3xl">
 
