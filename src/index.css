@@ -64,7 +64,7 @@ body {
   background-image: url("logotipo.webp");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100; /* ajusta o tamanho */
+  background-size: 600px; /* ajusta o tamanho */
   opacity: 0.3; /*  controla a força da marca d’água */
   pointer-events: none;
   z-index: 0;
