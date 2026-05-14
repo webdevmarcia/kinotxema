@@ -114,7 +114,7 @@ export default function Contatos() {
             </div>
 
             <a
-              href="https://wa.me/351932663895"
+              href="https://wa.me/351935586206"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-2.5 rounded-full text-white font-medium bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 transition-all shadow-md"
