@@ -1,134 +1,134 @@
 @import "tailwindcss";
 
-/* ------------------------------
-   VARIÁVEIS DE TEMA
------------------------------- */
-:root {
-  --castanho: rgb(161, 97, 97);
-  --brown: rgb(43, 12, 12);
-  --verde: green;
-  --gray: rgba(244, 140, 37, 0.08);
-  --claro: rgb(228, 167, 167);
+/* ------------------------------------------------------------
+   TEMA — cores e tipografia da marca
+   Disponíveis como classes Tailwind: bg-creme, text-terracota,
+   font-display, etc.
+------------------------------------------------------------ */
+@theme {
+  --color-creme: #fbf6ef;
+  --color-areia: #f3e7d6;
+  --color-cacau: #2b0c0c;
+  --color-cacau-suave: #6b4a43;
+  --color-terracota: #b4432a;
+  --color-terracota-escuro: #8f3220;
+  --color-ocre: #d99a2b;
+  --color-folha: #3f6b3a;
+  --color-whatsapp: #1fa855;
 
-  --white: #ffffff;
-  --black: #000000;
+  --font-sans: "Lexend", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
 }
 
-/* ------------------------------
-   RESET GLOBAL
------------------------------- */
-* {
-  
-  box-sizing: border-box;
-  
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
+  body {
+    @apply bg-creme text-cacau font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    @apply bg-ocre/40;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-terracota;
+  }
+
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
-li {
-  text-align: justify;
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-terracota;
+  }
+
+  .btn-primario,
+  .btn-secundario,
+  .btn-whatsapp,
+  .btn-claro {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition
+      duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primario {
+    @apply bg-cacau text-creme hover:bg-terracota;
+  }
+  .btn-secundario {
+    @apply border border-cacau/25 bg-white/60 text-cacau hover:border-cacau hover:bg-white;
+  }
+  .btn-whatsapp {
+    @apply bg-whatsapp text-white hover:brightness-110;
+  }
+  .btn-claro {
+    @apply bg-creme text-cacau hover:bg-white;
+  }
+
+  .campo {
+    @apply w-full rounded-xl border border-cacau/15 bg-white px-4 py-3 text-cacau placeholder:text-cacau-suave/60
+      transition focus:border-terracota focus:ring-2 focus:ring-terracota/20 focus:outline-none;
+  }
+
+  /* Faixa decorativa inspirada nos padrões de capulana */
+  .faixa-capulana {
+    height: 10px;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        var(--color-terracota) 0 24px,
+        var(--color-ocre) 24px 36px,
+        var(--color-folha) 36px 52px,
+        var(--color-cacau) 52px 58px
+      );
+  }
 }
 
-
-
-footer {
-  text-align: center;
-  align-items: center;
-}
-
-.contatos {
-  text-align: center;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Lexend", sans-serif;
-  overflow-x: hidden;
-  background-color: white;
-}
-
-
-
-#sobre {
-  position: relative;
-  background-color: white;
-  overflow: hidden;
-}
-
-#sobre::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("logotipo.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 600px; /* ajusta o tamanho */
-  opacity: 0.3; /*  controla a força da marca d’água */
-  pointer-events: none;
-  z-index: 0;
-}
-
-#sobre > * {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* Remove highlight azul no mobile */
-button, a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* ------------------------------
-   ANIMAÇÕES CINEMATOGRÁFICAS
------------------------------- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease forwards;
-}
-
-/* Slide do menu mobile */
-@keyframes slideLeft {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-
-.animate-slideLeft {
-  animation: slideLeft 0.4s ease forwards;
-}
-
-/* ------------------------------
-   IMAGENS
------------------------------- */
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-  
+@keyframes deslizar {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-
-p {
-  text-align: justify;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
-
-
-
-.font-greatvibes {
-    font-family: 'Great Vibes', cursive;
-}
-
