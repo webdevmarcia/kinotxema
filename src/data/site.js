@@ -6,7 +6,7 @@ export const SITE = {
     "Peças únicas com tecidos africanos cheios de cultura e identidade. Moda em capulana, peças sob medida e acessórios artesanais em Setúbal.",
   url: "https://kinotxema.vercel.app",
   fundadora: "Sandra Correia",
-  telefone: "+351 932 663 895",
+  telefone: "+351 935 586 206",
   whatsapp: "351935586206",
   instagram: "kinotxema",
   morada: {
