@@ -7,7 +7,7 @@ export const SITE = {
   url: "https://kinotxema.vercel.app",
   fundadora: "Sandra Correia",
   telefone: "+351 932 663 895",
-  whatsapp: "351932663895",
+  whatsapp: "351935586206",
   instagram: "kinotxema",
   morada: {
     linha1: "Centro Comercial S. Julião, loja 10",
